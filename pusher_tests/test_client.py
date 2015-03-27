@@ -4,7 +4,7 @@ from __future__ import print_function, absolute_import, division
 
 import unittest
 
-from pusher import Config, Pusher
+from pusher import Config, Client
 from pusher.util import GET
 
 try:
@@ -12,9 +12,9 @@ try:
 except ImportError:
     import mock
 
-class TestPusher(unittest.TestCase):
+class TestClient(unittest.TestCase):
     def setUp(self):
-        self.pusher = Pusher(config=Config.from_url(u'http://key:secret@somehost/apps/4'))
+        self.pusher = Client(config=Config.from_url(u'http://key:secret@somehost/apps/4'))
 
     def test_trigger_with_channels_list_success_case(self):
         json_dumped = u'{"message": "hello world"}'

@@ -42,7 +42,7 @@ def join_attributes(attributes):
 
     return six.text_type(',').join(attributes)
 
-class Pusher(object):
+class Client(object):
     """Client for the Pusher HTTP API.
 
     This client supports various backend adapters to support various http
