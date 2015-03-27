@@ -4,7 +4,7 @@ from __future__ import (print_function, unicode_literals, absolute_import,
                         division)
 from pusher.config import Config
 from pusher.request import Request
-from pusher.sync import SynchronousBackend
+from pusher.adapters.sync import SynchronousBackend
 from pusher.util import GET, POST, text, validate_channel
 
 import collections
