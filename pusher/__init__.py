@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
-from .config import Config
-from .pusher import Client
+from pusher.config import Config
+from pusher.pusher import Pusher
 
 __all__ = [
-    'Config',
-    'Client',
+	'Config',
+    'Pusher',
 ]

@@ -53,10 +53,10 @@ class Client(object):
                     method. If none is provided, a
                     python.sync.SynchronousBackend instance is created.
     """
-    def __init__(self, config, backend=None):
+    def __init__(self, config, backend=SynchronousBackend):
         if not isinstance(config, Config):
             raise TypeError("config should be a pusher.Config object")
-        self.backend = backend or SynchronousBackend(config)
+        self.backend = backend(config)
         self.config = config
 
     @request_method
